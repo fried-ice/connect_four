@@ -123,7 +123,7 @@ int Game::setUp(std::vector<std::string>* arguments) {
     std::cout << "Launcher Argument count :: " << max/2 << std::endl;
     unsigned int c = 7;
     unsigned int r = 6;
-    unsigned int l = 3;
+    unsigned int l = 4;
     std::string player1Name = "Player 1";
     std::string player2Name = "Player 2";
     std::string player1Token = "x";
