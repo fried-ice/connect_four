@@ -43,6 +43,14 @@ int Field::addDisc(int column, Player* newOwner) {
     return 0;
 }
 
+bool Field::isFull() {
+	for (int i = 0; i < width; ++i) {
+		if (currentDiscs.at(i).size() < height)
+			return false;
+	}
+	return true;
+}
+
 void Field::draw(std::ostream& os) {
     Disc* dsc;
     for(unsigned int i = height; i > 0; i--) {

@@ -25,6 +25,7 @@ public:
     std::array<int, 2>* getLastPosition();
     void draw(std::ostream& os);
     void setMaxTokenLengt(Color* col1, Color* col2);
+	bool isFull();
 
 };
 

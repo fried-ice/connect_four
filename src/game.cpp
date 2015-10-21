@@ -49,6 +49,8 @@ int Game::run() {
         currentField->draw(std::cout);
         winner = Game::checkForWin(currentField->getLastPosition());
         currentPlayer == player1 ? currentPlayer = player2 : currentPlayer = player1;
+		if (currentField->isFull())
+			break;
     }
 
     return 0;
@@ -113,7 +115,11 @@ bool Game::checkStraight(std::array<int, 2>* position, int shiftV, int shiftH) {
 }
 
 int Game::finish() {
-    std::cout << winner->getName() << " has won the game, congratulations!" << std::endl;
+	if (winner == NULL)
+		std::cout << "Nobody wins this time!";
+	else
+		std::cout << winner->getName() << " has won the game, congratulations!";
+	std::cout << std::endl;
     return 0;
 }
 
