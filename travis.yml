@@ -1,0 +1,13 @@
+language: cpp
+compiler: gcc
+
+# whitelist branches to build
+branches:
+    only:
+        - travis
+
+before_script:
+    - cd build
+    - cmake .
+
+script: make
